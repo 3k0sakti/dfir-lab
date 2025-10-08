@@ -1,0 +1,5 @@
+total 8
+drwxr-xr-x 1 root root  24 Oct  8 02:34 .
+drwxr-xr-x 1 root root  36 Oct  8 02:45 ..
+-rw-r--r-- 1 root root 102 Mar 23  2022 .placeholder
+-rw-r--r-- 1 root root 202 Jan  8  2022 e2scrub_all

@@ -1,0 +1,45 @@
+# Dockerfile for Compromised Ubuntu System
+FROM ubuntu:22.04
+
+# Install basic packages for simulation
+RUN apt-get update && apt-get install -y \
+    openssh-server \
+    nginx \
+    curl \
+    wget \
+    vim \
+    net-tools \
+    psmisc \
+    cron \
+    rsyslog \
+    sudo \
+    python3 \
+    python3-pip \
+    gcc \
+    make \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create legitimate users
+RUN useradd -m -s /bin/bash webadmin && \
+    useradd -m -s /bin/bash dbuser && \
+    echo "webadmin:webpass123" | chpasswd && \
+    echo "dbuser:dbpass456" | chpasswd
+
+# Set up SSH
+RUN mkdir /var/run/sshd
+RUN echo 'root:rootpass' | chpasswd
+RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+# Create some legitimate files and directories
+RUN mkdir -p /var/www/html /var/log/app /home/webadmin/projects
+RUN echo "<h1>Company Website</h1>" > /var/www/html/index.html
+RUN echo "<?php phpinfo(); ?>" > /var/www/html/info.php
+
+# Start services
+COPY start-services.sh /start-services.sh
+RUN chmod +x /start-services.sh
+
+EXPOSE 22 80
+
+CMD ["/start-services.sh"]
