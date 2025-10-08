@@ -69,8 +69,8 @@ execute_scenario() {
     case "$scenario" in
         "1"|"apt")
             echo "[EXECUTING] APT Simulation Scenario"
-            if [ -f "./apt_simulation.sh" ]; then
-                docker exec "$CONTAINER_NAME" /tmp/apt_simulation.sh
+            if [ -f "$SCENARIOS_DIR/apt_simulation.sh" ]; then
+                docker exec "$CONTAINER_NAME" /tmp/scenarios/apt_simulation.sh
             else
                 echo "APT simulation script not found!"
                 return 1
@@ -78,8 +78,8 @@ execute_scenario() {
             ;;
         "2"|"ransomware")
             echo "[EXECUTING] Ransomware Attack Scenario"
-            if [ -f "./ransomware_simulation.sh" ]; then
-                docker exec "$CONTAINER_NAME" /tmp/ransomware_simulation.sh
+            if [ -f "$SCENARIOS_DIR/ransomware_simulation.sh" ]; then
+                docker exec "$CONTAINER_NAME" /tmp/scenarios/ransomware_simulation.sh
             else
                 echo "Ransomware simulation script not found!"
                 return 1
@@ -87,8 +87,8 @@ execute_scenario() {
             ;;
         "3"|"insider")
             echo "[EXECUTING] Insider Threat Scenario"
-            if [ -f "./insider_threat_simulation.sh" ]; then
-                docker exec "$CONTAINER_NAME" /tmp/insider_threat_simulation.sh
+            if [ -f "$SCENARIOS_DIR/insider_threat_simulation.sh" ]; then
+                docker exec "$CONTAINER_NAME" /tmp/scenarios/insider_threat_simulation.sh
             else
                 echo "Insider threat simulation script not found!"
                 return 1
@@ -96,8 +96,8 @@ execute_scenario() {
             ;;
         "4"|"webapp")
             echo "[EXECUTING] Web Application Attack Scenario"
-            if [ -f "./webapp_attack_simulation.sh" ]; then
-                docker exec "$CONTAINER_NAME" /tmp/webapp_attack_simulation.sh
+            if [ -f "$SCENARIOS_DIR/webapp_attack_simulation.sh" ]; then
+                docker exec "$CONTAINER_NAME" /tmp/scenarios/webapp_attack_simulation.sh
             else
                 echo "Web application attack simulation script not found!"
                 return 1

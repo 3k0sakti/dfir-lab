@@ -1,0 +1,48 @@
+Evidence Collection Summary
+===========================
+Case ID: CASE_20251008_104334
+Container: compromised-ubuntu
+Collection Time: Wed Oct  8 10:43:36 WIB 2025
+Files Collected:       37
+
+Files:
+total 208
+drwxr-xr-x  39 ekosakti  staff  1248 Oct  8 10:43 .
+drwxr-xr-x   3 ekosakti  staff    96 Oct  8 10:43 ..
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 auth_log.txt
+-rw-r--r--   1 ekosakti  staff   196 Oct  8 10:43 collection_summary.txt
+-rw-r--r--   1 ekosakti  staff   309 Oct  8 10:43 collection.log
+-rw-r--r--   1 ekosakti  staff  9455 Oct  8 10:43 container_metadata.json
+-rw-r--r--   1 ekosakti  staff  2520 Oct  8 10:43 cpu_info.txt
+-rw-r--r--   1 ekosakti  staff   198 Oct  8 10:43 cron_d_files.txt
+-rw-r--r--   1 ekosakti  staff  1136 Oct  8 10:43 crontab.txt
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 dmesg.txt
+-rw-r--r--   1 ekosakti  staff   223 Oct  8 10:43 dns_config.txt
+-rw-r--r--   1 ekosakti  staff    99 Oct  8 10:43 environment_variables.txt
+-rw-r--r--   1 ekosakti  staff   636 Oct  8 10:43 group_file.txt
+-rw-r--r--   1 ekosakti  staff   144 Oct  8 10:43 hidden_files_home.txt
+-rw-r--r--   1 ekosakti  staff   108 Oct  8 10:43 hidden_files_tmp.txt
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 hidden_web_files.txt
+-rw-r--r--   1 ekosakti  staff    13 Oct  8 10:43 hostname_file.txt
+-rw-r--r--   1 ekosakti  staff   175 Oct  8 10:43 hosts_file.txt
+-rw-r--r--   1 ekosakti  staff  1208 Oct  8 10:43 memory_info.txt
+-rw-r--r--   1 ekosakti  staff   548 Oct  8 10:43 network_connections.txt
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 nginx_access.log
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 nginx_error.log
+-rw-r--r--   1 ekosakti  staff  1414 Oct  8 10:43 passwd_file.txt
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 potential_webshells.txt
+-rw-r--r--   1 ekosakti  staff  1123 Oct  8 10:43 process_tree.txt
+-rw-r--r--   1 ekosakti  staff  2427 Oct  8 10:43 recent_files.txt
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 root_bash_history.txt
+-rw-r--r--   1 ekosakti  staff  1352 Oct  8 10:43 running_processes.txt
+-rw-r--r--   1 ekosakti  staff   973 Oct  8 10:43 shadow_file.txt
+-rw-r--r--   1 ekosakti  staff   470 Oct  8 10:43 socket_connections.txt
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 ssh_authorized_keys.txt
+-rw-r--r--   1 ekosakti  staff  3238 Oct  8 10:43 sshd_config.txt
+-rw-r--r--   1 ekosakti  staff   328 Oct  8 10:43 suid_sgid_files.txt
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 suspicious_binaries.txt
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 suspicious_listeners.txt
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 suspicious_processes.txt
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 syslog.txt
+-rw-r--r--   1 ekosakti  staff    62 Oct  8 10:43 web_php_files.txt
+-rw-r--r--   1 ekosakti  staff     0 Oct  8 10:43 webadmin_bash_history.txt

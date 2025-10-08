@@ -1,0 +1,5 @@
+/tmp/.lol_commands.txt
+/tmp/.memory_artifacts.txt
+/tmp/.dns_exfil.sh
+/tmp/.time_evasion.sh
+/tmp/.cleanup.sh

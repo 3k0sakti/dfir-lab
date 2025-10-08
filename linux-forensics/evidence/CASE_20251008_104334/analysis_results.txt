@@ -1,0 +1,51 @@
+FORENSIC ANALYSIS RESULTS
+=========================
+Analysis Date: Wed Oct  8 10:44:01 WIB 2025
+
+USER ACCOUNT ANALYSIS:
+---------------------
+SUSPICIOUS USERS FOUND:
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+webadmin:x:1000:1000::/home/webadmin:/bin/bash
+
+ACCOUNTS WITH ROOT PRIVILEGES (UID 0):
+root
+
+PROCESS ANALYSIS:
+----------------
+NETWORK CONNECTIONS ANALYSIS:
+----------------------------
+AUTHENTICATION LOG ANALYSIS:
+---------------------------
+ROOT COMMAND HISTORY ANALYSIS:
+-----------------------------
+WEBADMIN COMMAND HISTORY ANALYSIS:
+---------------------------------
+HOSTS FILE ANALYSIS:
+-------------------
+CUSTOM HOST ENTRIES:
+fe00::	ip6-localnet
+ff00::	ip6-mcastprefix
+ff02::1	ip6-allnodes
+ff02::2	ip6-allrouters
+192.168.215.2	f1cfdfb4a587
+
+APT THREAT ANALYSIS:
+-------------------
+RANSOMWARE ANALYSIS:
+------------------
+RANSOMWARE INDICATORS:
+./analysis_results.txt:RANSOMWARE ANALYSIS:
+
+INSIDER THREAT ANALYSIS:
+------------------------
+WEB APPLICATION ATTACK ANALYSIS:
+-------------------------------
+CRYPTOCURRENCY MINING ANALYSIS:
+------------------------------
+CRYPTO MINING INDICATORS:
+./analysis_results.txt:CRYPTOCURRENCY MINING ANALYSIS:
+./passwd_file.txt:lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+./passwd_file.txt:news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+./passwd_file.txt:uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+

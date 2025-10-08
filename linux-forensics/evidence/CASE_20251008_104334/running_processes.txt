@@ -1,0 +1,15 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   3888  2832 ?        Ss   03:43   0:00 /bin/bash /start-services.sh
+root          18  0.0  0.0  15208  4276 ?        Ss   03:43   0:00 sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups
+root          31  0.0  0.0  55088  2324 ?        Ss   03:43   0:00 nginx: master process /usr/sbin/nginx
+www-data      32  0.0  0.0  55784  6632 ?        S    03:43   0:00 nginx: worker process
+www-data      33  0.0  0.0  55784  6644 ?        S    03:43   0:00 nginx: worker process
+www-data      34  0.0  0.0  55784  6644 ?        S    03:43   0:00 nginx: worker process
+www-data      35  0.0  0.0  55784  6644 ?        S    03:43   0:00 nginx: worker process
+www-data      36  0.0  0.0  55784  6644 ?        S    03:43   0:00 nginx: worker process
+www-data      37  0.0  0.0  55784  6644 ?        S    03:43   0:00 nginx: worker process
+www-data      38  0.0  0.0  55784  6644 ?        S    03:43   0:00 nginx: worker process
+www-data      39  0.0  0.0  55784  6636 ?        S    03:43   0:00 nginx: worker process
+root          45  0.0  0.0   3544  1608 ?        Ss   03:43   0:00 /usr/sbin/cron -P
+root          46  0.0  0.0   2268  1136 ?        S    03:43   0:00 tail -f /dev/null
+root          73  0.0  0.0   6444  2536 ?        Rs   03:43   0:00 ps aux

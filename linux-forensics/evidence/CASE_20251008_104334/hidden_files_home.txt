@@ -1,0 +1,6 @@
+/home/webadmin/.bash_logout
+/home/webadmin/.bashrc
+/home/webadmin/.profile
+/home/dbuser/.bash_logout
+/home/dbuser/.bashrc
+/home/dbuser/.profile
