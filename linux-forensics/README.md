@@ -1,242 +1,123 @@
-# DFIR Lab - Digital Forensics & Incident Response Laboratory# Digital Forensics Investigation Lab
+# Digital Forensics Investigation Lab
 
+A comprehensive digital forensics investigation lab for analyzing compromised Ubuntu containers using Docker. This lab simulates real-world incident response scenarios and teaches hands-on digital forensics techniques.
 
+## 🎯 Learning Objectives
 
-A comprehensive collection of digital forensics and incident response tools and scenarios for hands-on learning and practice.A comprehensive digital forensics investigation lab for analyzing compromised Ubuntu containers using Docker. This lab simulates real-world incident response scenarios and teaches hands-on digital forensics techniques.
-
-
-
-## 📁 Repository Structure## 🎯 Learning Objectives
-
-
-
-### 🐧 linux-forensics/- Understand digital forensics methodology and best practices
-
-Digital Forensics Investigation Lab for Linux systems using Docker containers.- Learn to identify Indicators of Compromise (IoCs) in Linux systems
-
+- Understand digital forensics methodology and best practices
+- Learn to identify Indicators of Compromise (IoCs) in Linux systems
 - Practice evidence collection and preservation techniques
+- Develop skills in log analysis and timeline reconstruction
+- Experience the complete forensic investigation workflow
+- Learn to document findings in professional forensic reports
 
-**Features:**- Develop skills in log analysis and timeline reconstruction
-
-- **Multi-Attack Scenarios**: APT, Ransomware, Insider Threats, Web Application attacks- Experience the complete forensic investigation workflow
-
-- **Realistic TTPs**: Based on MITRE ATT&CK framework  - Learn to document findings in professional forensic reports
-
-- **Full Investigation Workflow**: Evidence collection → Analysis → Reporting
-
-- **Hands-on Learning**: Step-by-step tutorials and scenarios## 🏗️ Lab Architecture
-
-- **Professional Tools**: Forensic collectors, analyzers, and report generators
+## 🏗️ Lab Architecture
 
 ```
-
-**Quick Start:**forensics/lab/
-
-```bash├── Dockerfile.compromised     # Ubuntu container with pre-configured services
-
-cd linux-forensics/├── start-services.sh         # Container startup script
-
-chmod +x *.sh├── compromise.sh             # Compromise simulation script
-
-./scenario_selector.sh apt          # APT investigation├── forensic_collector.sh     # Evidence collection script
-
-./master_investigation.sh           # Full investigation (all scenarios)├── evidence_analyzer.sh      # IoC analysis script
-
-```├── timeline_analyzer.sh      # Timeline reconstruction script
-
+forensics/lab/
+├── Dockerfile.compromised     # Ubuntu container with pre-configured services
+├── start-services.sh         # Container startup script
+├── compromise.sh             # Compromise simulation script
+├── forensic_collector.sh     # Evidence collection script
+├── evidence_analyzer.sh      # IoC analysis script
+├── timeline_analyzer.sh      # Timeline reconstruction script
 ├── memory_forensics.sh       # Memory artifact analysis
+├── network_forensics.sh      # Network artifact analysis
+├── report_generator.sh       # Forensic report generator
+├── master_investigation.sh   # Main orchestration script
+└── README.md                # This file
 
-**Learning Objectives:**├── network_forensics.sh      # Network artifact analysis
-
-- ✅ Digital forensics methodology├── report_generator.sh       # Forensic report generator
-
-- ✅ Evidence collection & preservation├── master_investigation.sh   # Main orchestration script
-
-- ✅ Attack pattern recognition└── README.md                # This file
-
-- ✅ Timeline reconstruction
-
-- ✅ Professional report writingevidence/                     # Collected forensic evidence
-
-- ✅ MITRE ATT&CK framework mappingreports/                     # Generated forensic reports
-
+evidence/                     # Collected forensic evidence
+reports/                     # Generated forensic reports
 ```
 
-**Documentation:**
+## 🚀 Quick Start
 
-- `README.md` - Comprehensive lab overview## 🚀 Quick Start
-
-- `TUTORIAL_PANDUAN.md` - Step-by-step learning guide
-
-- `QUICK_START.md` - Quick reference guide### Prerequisites
-
-- `SCENARIOS_SUMMARY.md` - Attack scenarios overview
+### Prerequisites
 
 - Docker installed and running
-
-## 🚀 Getting Started- macOS/Linux/WSL environment
-
+- macOS/Linux/WSL environment
 - Bash shell
+- At least 2GB free disk space
 
-### Prerequisites- At least 2GB free disk space
-
-- Docker Desktop
-
-- 4GB+ RAM### Run Complete Investigation
-
-- 10GB+ disk space
-
-- macOS/Linux/WSL```bash
-
-# Navigate to the lab directory
-
-### Quick Setupcd /Users/ekosakti/Code/forensics/lab
+### Run Complete Investigation
 
 ```bash
+# Navigate to the lab directory
+cd /Users/ekosakti/Code/forensics/lab
 
-git clone https://github.com/3k0sakti/dfir-lab.git# Make scripts executable
-
-cd dfir-lab/linux-forensicschmod +x *.sh
-
+# Make scripts executable
 chmod +x *.sh
 
-./scenario_selector.sh# Run the complete investigation with all scenarios
-
-```./master_investigation.sh
-
+# Run the complete investigation with all scenarios
+./master_investigation.sh
 ```
-
-## 🎯 Learning Path
 
 This will:
-
-### Beginner (2-3 hours)1. Build and start a compromised Ubuntu container
-
-- Basic system investigation2. Simulate multiple advanced attack scenarios including:
-
-- Evidence collection practice   - APT (Advanced Persistent Threat) campaign
-
-- Linux forensics fundamentals   - Ransomware attack with double extortion
-
+1. Build and start a compromised Ubuntu container
+2. Simulate multiple advanced attack scenarios including:
+   - APT (Advanced Persistent Threat) campaign
+   - Ransomware attack with double extortion
    - Insider threat with data theft and sabotage
+   - Web application compromise
+   - Cryptocurrency mining
+3. Collect comprehensive forensic evidence
+4. Analyze findings for IoCs using MITRE ATT&CK framework
+5. Generate a professional forensic report
 
-### Intermediate (4-6 hours)     - Web application compromise
+### Quick Scenario Selection
 
-- APT campaign investigation   - Cryptocurrency mining
-
-- Ransomware attack analysis3. Collect comprehensive forensic evidence
-
-- Insider threat detection4. Analyze findings for IoCs using MITRE ATT&CK framework
-
-- Web application attacks5. Generate a professional forensic report
-
-
-
-### Advanced (6-8 hours)### Quick Scenario Selection
-
-- Multi-vector enterprise attacks
-
-- Professional incident response```bash
-
-- Custom scenario development# Interactive scenario selector
-
+```bash
+# Interactive scenario selector
 ./scenario_selector.sh
 
-## 🛡️ Scenarios Available
-
 # Run specific scenario
-
-1. **🕵️ APT Campaign** - Silent Dragon nation-state attack./scenario_selector.sh apt          # APT simulation
-
-2. **🔒 Ransomware** - CryptoVault double extortion./scenario_selector.sh ransomware   # Ransomware attack
-
-3. **👤 Insider Threat** - Database administrator abuse./scenario_selector.sh insider      # Insider threat
-
-4. **🌐 Web Application** - OWASP Top 10 exploits./scenario_selector.sh webapp       # Web application attack
-
-5. **🚨 Combined Attack** - Multi-vector enterprise compromise./scenario_selector.sh combined     # All scenarios
-
+./scenario_selector.sh apt          # APT simulation
+./scenario_selector.sh ransomware   # Ransomware attack
+./scenario_selector.sh insider      # Insider threat
+./scenario_selector.sh webapp       # Web application attack
+./scenario_selector.sh combined     # All scenarios
 ```
-
-## 🔧 Tools Included
 
 ## 🎯 Real-World Attack Scenarios
 
-- **Evidence Collectors** - Automated forensic data collection
+The lab now includes sophisticated, realistic attack scenarios based on actual threat intelligence:
 
-- **IoC Analyzers** - Indicator of Compromise detectionThe lab now includes sophisticated, realistic attack scenarios based on actual threat intelligence:
-
-- **Timeline Builders** - Attack sequence reconstruction  
-
-- **Report Generators** - Professional forensic reports### 1. APT (Advanced Persistent Threat) Campaign
-
-- **Scenario Managers** - Interactive attack deployment**Scenario**: Nation-state style attack by "Silent Dragon" group
-
+### 1. APT (Advanced Persistent Threat) Campaign
+**Scenario**: Nation-state style attack by "Silent Dragon" group
 - **Initial Access**: Spear phishing with malicious attachments
-
-## 📊 Supported Frameworks- **Persistence**: SSH keys, systemd services, cron jobs
-
+- **Persistence**: SSH keys, systemd services, cron jobs
 - **Lateral Movement**: WMI execution, credential dumping
+- **Data Exfiltration**: DNS tunneling, encrypted channels
+- **TTPs**: T1566.001, T1543.002, T1021.001, T1048.003
 
-- **MITRE ATT&CK** - 20+ techniques mapped- **Data Exfiltration**: DNS tunneling, encrypted channels
-
-- **OWASP Top 10** - Web application vulnerabilities- **TTPs**: T1566.001, T1543.002, T1021.001, T1048.003
-
-- **NIST Cybersecurity Framework** - Incident response methodology
-
-- **Digital Forensics Process** - ACPO guidelines compliance### 2. Ransomware Attack Simulation
-
+### 2. Ransomware Attack Simulation
 **Scenario**: "CryptoVault" ransomware by DarkMoney Gang
-
-## 🤝 Contributing- **Initial Access**: RDP brute force attack
-
+- **Initial Access**: RDP brute force attack
 - **Privilege Escalation**: SUID exploitation, sudo abuse
-
-Contributions welcome! Please read our contribution guidelines and submit pull requests for:- **Data Theft**: Double extortion before encryption
-
+- **Data Theft**: Double extortion before encryption
 - **Impact**: File encryption, shadow copy deletion
+- **TTPs**: T1110.001, T1486, T1490, T1041
 
-- New attack scenarios- **TTPs**: T1110.001, T1486, T1490, T1041
-
-- Additional forensic tools
-
-- Enhanced analysis capabilities### 3. Insider Threat Simulation
-
-- Documentation improvements**Scenario**: Database administrator with legitimate access abuse
-
-- Bug fixes and optimizations- **Activities**: After-hours data theft, financial fraud
-
+### 3. Insider Threat Simulation
+**Scenario**: Database administrator with legitimate access abuse
+- **Activities**: After-hours data theft, financial fraud
 - **Methods**: USB exfiltration, email data sharing
-
-## ⚠️ Disclaimer- **Sabotage**: Database manipulation, log tampering
-
+- **Sabotage**: Database manipulation, log tampering
 - **Anti-Forensics**: Evidence destruction, timestomping
+- **TTPs**: T1078, T1052.001, T1565, T1070
 
-This lab contains simulated malware and attack techniques for educational purposes only. Use only in isolated environments and comply with local laws and regulations.- **TTPs**: T1078, T1052.001, T1565, T1070
-
-
-
-## 📞 Support### 4. Web Application Attack
-
+### 4. Web Application Attack
 **Scenario**: Multi-stage web application compromise
-
-- **Documentation**: Check README files in each directory- **Exploitation**: SQL injection, XSS, file upload bypass
-
-- **Issues**: Report bugs via GitHub Issues- **Persistence**: Web shells, configuration backdoors
-
-- **Discussions**: Join our community discussions- **Data Access**: Database dumping, API exploitation
-
+- **Exploitation**: SQL injection, XSS, file upload bypass
+- **Persistence**: Web shells, configuration backdoors
+- **Data Access**: Database dumping, API exploitation
 - **Exfiltration**: HTTP POST, stolen session tokens
+- **TTPs**: T1190, T1505.003, T1041, T1552.001
 
----- **TTPs**: T1190, T1505.003, T1041, T1552.001
-
-
-
-**🔍 Happy Investigating!**### 5. MITRE ATT&CK Framework Implementation
-
+### 5. MITRE ATT&CK Framework Implementation
 **Comprehensive TTP Coverage**:
-
-*Building the next generation of digital forensics professionals through hands-on learning.*- **18 different techniques** across 8 major tactics
+- **18 different techniques** across 8 major tactics
 - **Real attack chain simulation** from initial access to impact
 - **Forensic artifact generation** for each technique
 - **Complete attack lifecycle** modeling
